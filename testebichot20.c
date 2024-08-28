@@ -33,6 +33,10 @@ int main(void)
         printf("digite o valor de ataque do monstro %i \n", x);
         scanf("%f", &A[x].Vatq);
 
+
+         printf("digite a media de dano do monstro %i \n", x);
+        scanf("%f", &A[x].dano);
+
         printf("digite a defesa do monstro %i \n", x);
         scanf("%f", &A[x].defesa);
 
@@ -52,10 +56,9 @@ int main(void)
         scanf("%f", &A[x].CD);
     }
 
-    for (int y = 1; y <= 10; y++)
+    for (int y = 0; y < x; y++)
     {
-        A[y].media = A[y].notaum + A[y].notadois + A[y].notatres;
-        A[y].media = A[y].media / 3;
-        printf("a media do aluno %i é: %f \n", y, A[y].media);
+       
+        printf("o monstro numero  %i possui o nome %s, \n ele tem  %i de bonus de acerto, dando um dano medio de %f\n de resistencias ele possui %f \n", y+1, A[y].media);
     }
 }
