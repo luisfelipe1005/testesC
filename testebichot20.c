@@ -145,4 +145,4 @@ Monstro criar(int x)
     }
 
     return m;
-};
+}
