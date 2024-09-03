@@ -62,6 +62,7 @@ int main(void)
                 {
                     mostrar(A[z], z + 1);
                 };
+                // sexo
                 printf("\ntodos os monstros mostrados.");
             }
             else
