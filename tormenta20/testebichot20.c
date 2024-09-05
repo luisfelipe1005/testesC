@@ -4,21 +4,6 @@
 #include "t20anlz.h"
 
 // struct responsavel por guardar as informações do Monstro
-typedef struct
-{
-    char nome[100];
-    int Vatq;
-    float dano;
-    int defesa;
-    int resFo;
-    int resM;
-    int resFr;
-    int pv;
-    int CD;
-    int PM;
-    int ND;
-    int tipo;
-} Monstro;
 
 void mostrar(Monstro bicho, int numero);
 void analisar(Monstro bicho, int numero);
@@ -47,6 +32,7 @@ int main(void)
             for (int x = 0; x < y; x++)
             {
                 A[x] = criar(x + 1);
+                teste(A[x]);
             }
             break;
 
@@ -213,109 +199,7 @@ Monstro criar(int x)
 
 void analisar(Monstro bicho, int numero)
 {
-    float calc = 0;
-
+    int ND = teste(bicho);
+    printf("testando %d", ND);
     // toda essa estrutura complexa e pica calcula o nd de cada coisa comparando com a tabela
-    if (bicho.tipo == 1)
-    {
-        printf("%d\n", bicho.Vatq);
-        if (bicho.Vatq <= 6)
-        {
-            calc = +0.25;
-        }
-        else if (bicho.Vatq <= 7)
-        {
-            calc = +0.5;
-        }
-        else if (bicho.Vatq <= 9)
-        {
-            calc = +1;
-        }
-        else if (bicho.Vatq <= 12)
-        {
-            calc = +2;
-        }
-        else if (bicho.Vatq <= 14)
-        {
-            calc = +3;
-        }
-        else if (bicho.Vatq <= 16)
-        {
-            calc = +4;
-        }
-        else if (bicho.Vatq == 17)
-        {
-            calc = +5;
-        }
-        else if (bicho.Vatq <= 20)
-        {
-            calc = +6;
-        }
-        else if (bicho.Vatq <= 24)
-        {
-            calc = +7;
-        }
-        else if (bicho.Vatq <= 26)
-        {
-            calc = +8;
-        }
-        else if (bicho.Vatq == 27)
-        {
-            calc = +9;
-        }
-        else if (bicho.Vatq <= 29)
-        {
-            calc = +10;
-        }
-        else if (bicho.Vatq <= 34)
-        {
-            calc = +11;
-        }
-        else if (bicho.Vatq <= 36)
-        {
-            calc = +12;
-        }
-        else if (bicho.Vatq == 37)
-        {
-            calc = +13;
-        }
-        else if (bicho.Vatq <= 39)
-        {
-            calc = +14;
-        }
-        else if (bicho.Vatq <= 43)
-        {
-            calc = +15;
-        }
-        else if (bicho.Vatq <= 46)
-        {
-            calc = +16;
-        }
-        else if (bicho.Vatq == 47)
-        {
-            calc = +17;
-        }
-        else if (bicho.Vatq <= 49)
-        {
-            calc = +18;
-        }
-        else if (bicho.Vatq <= 52)
-        {
-            calc = +19;
-        }
-        else if (bicho.Vatq <= 54)
-        {
-            calc = +20;
-        }
-        else if (bicho.Vatq <= 58)
-        {
-            calc = +21;
-        }
-        else
-        {
-            calc = +22;
-        }
-
-        printf(" teste %f\n", calc);
-    }
 }
