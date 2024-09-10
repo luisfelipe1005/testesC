@@ -196,197 +196,8 @@ int teste(Monstro bicho)
         }
         else if (bicho.dano <= 186)
         {
-            calc = +16;  if (bicho.defesa <= 11)
-        {
-            calc = +0.25;
-        }
-        else if (bicho.defesa <= 14)
-        {
-            calc = +0.5;
-        }
-        else if (bicho.defesa <= 16)
-        {
-            calc = +1;
-        }
-        else if (bicho.defesa <= 19)
-        {
-            calc = +2;
-        }
-        else if (bicho.defesa <= 21)
-        {
-            calc = +3;
-        }
-        else if (bicho.defesa <= 23)
-        {
-            calc = +4;
-        }
-        else if (bicho.defesa == 24)
-        {
-            calc = +5;
-        }
-        else if (bicho.defesa <= 27)
-        {
-            calc = +6;
-        }
-        else if (bicho.defesa <= 31)
-        {
-            calc = +7;
-        }
-        else if (bicho.defesa <= 33)
-        {
-            calc = +8;
-        }
-        else if (bicho.defesa == 34)
-        {
-            calc = +9;
-        }
-        else if (bicho.defesa <= 36)
-        {
-            calc = +10;
-        }
-        else if (bicho.defesa <= 41)
-        {
-            calc = +11;
-        }
-        else if (bicho.defesa <= 43)
-        {
-            calc = +12;
-        }
-        else if (bicho.defesa == 44)
-        {
-            calc = +13;
-        }
-        else if (bicho.defesa <= 46)
-        {
-            calc = +14;
-        }
-        else if (bicho.defesa <= 50)
-        {
-            calc = +15;
-        }
-        else if (bicho.defesa <= 53)
-        {
-            calc = +16;
-        }
-        else if (bicho.defesa == 54)
-        {
-            calc = +17;
-        }
-        else if (bicho.defesa <= 56)
-        {
-            calc = +18;
-        }
-        else if (bicho.defesa <= 59)
-        {
-            calc = +19;
-        }
-        else if (bicho.defesa <= 61)
-        {
-            calc = +20;
-        }
-        else if (bicho.defesa <= 65)
-        {
-            calc = +21;
-        }
-        else
-        {
-            calc = +22;
-        }  if (bicho.defesa <= 11)
-        {
-            calc = +0.25;
-        }
-        else if (bicho.defesa <= 14)
-        {
-            calc = +0.5;
-        }
-        else if (bicho.defesa <= 16)
-        {
-            calc = +1;
-        }
-        else if (bicho.defesa <= 19)
-        {
-            calc = +2;
-        }
-        else if (bicho.defesa <= 21)
-        {
-            calc = +3;
-        }
-        else if (bicho.defesa <= 23)
-        {
-            calc = +4;
-        }
-        else if (bicho.defesa == 24)
-        {
-            calc = +5;
-        }
-        else if (bicho.defesa <= 27)
-        {
-            calc = +6;
-        }
-        else if (bicho.defesa <= 31)
-        {
-            calc = +7;
-        }
-        else if (bicho.defesa <= 33)
-        {
-            calc = +8;
-        }
-        else if (bicho.defesa == 34)
-        {
-            calc = +9;
-        }
-        else if (bicho.defesa <= 36)
-        {
-            calc = +10;
-        }
-        else if (bicho.defesa <= 41)
-        {
-            calc = +11;
-        }
-        else if (bicho.defesa <= 43)
-        {
-            calc = +12;
-        }
-        else if (bicho.defesa == 44)
-        {
-            calc = +13;
-        }
-        else if (bicho.defesa <= 46)
-        {
-            calc = +14;
-        }
-        else if (bicho.defesa <= 50)
-        {
-            calc = +15;
-        }
-        else if (bicho.defesa <= 53)
-        {
-            calc = +16;
-        }
-        else if (bicho.defesa == 54)
-        {
-            calc = +17;
-        }
-        else if (bicho.defesa <= 56)
-        {
-            calc = +18;
-        }
-        else if (bicho.defesa <= 59)
-        {
-            calc = +19;
-        }
-        else if (bicho.defesa <= 61)
-        {
-            calc = +20;
-        }
-        else if (bicho.defesa <= 65)
-        {
-            calc = +21;
-        }
-        else
-        {
-            calc = +22;
-        }
+            calc = +16;  
+        
         }
         else if (bicho.dano == 200)
         {
@@ -803,14 +614,32 @@ int teste(Monstro bicho)
         else
         {
             calc = +22;
-        }f
+        }
         printf(" teste %f\n", calc);
     }
     /*
     //calcula o CD de efeito:
-    if(bicho.CD)
+    if(bicho.CD!=0){
+    if(bicho.CD==12){
+    calc +=0.25;
+}
+	else if(bicho.CD==13){
+calc +=0.5
+}
     if(bicho.CD <=18){
-        for(int x)
+    
+       for(int x = 13, x < bicho.CD, x++){
+       calc+=1
+       
+		}
+    }
+    
+    if(bicho.CD <=18){
+    
+       for(int x = 13, x < bicho.CD, x+=2){
+       calc+=1
+       
+		}
     }
     */
 }
