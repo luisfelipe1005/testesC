@@ -17,8 +17,8 @@ typedef struct
     int tipo;
 } Monstro;
 
-int teste(Monstro m);
-int teste(Monstro bicho)
+float anlz(Monstro m);
+float anlz(Monstro bicho)
 {
     float calc = 0;
     int arredondar = 0;
@@ -125,7 +125,7 @@ int teste(Monstro bicho)
         }
 
         // calcula o valor da nd baseado em dano medio
-        printf("%d\n", bicho.dano);
+        printf("%f\n", bicho.dano);
         if (bicho.dano <= 8)
         {
             calc = +0.25;
@@ -396,7 +396,7 @@ int teste(Monstro bicho)
         {
             calc = +18;
             arredondar = +19;
-            cont++
+            cont++;
         }
         else if (bicho.resFo <= 34)
         {
@@ -503,16 +503,16 @@ int teste(Monstro bicho)
         printf("%d\n", bicho.resFr);
         if (bicho.resFr >= 31)
         {
-            calc = +22
+            calc = +22;
         }
         else if (bicho.resFr >= 29)
         {
-            calc = +21
+            calc = +21;
         }
         else
         {
             int Frcont = 0;
-            for (int i = -2, i < bicho.resFr, i++)
+            for (int i = -2; i < bicho.resFr; i++)
             {
                 Frcont++;
             }
@@ -617,31 +617,62 @@ int teste(Monstro bicho)
         }
         printf(" teste %f\n", calc);
     }
-    /*
+    
     //calcula o CD de efeito:
     if(bicho.CD!=0){
     if(bicho.CD==12){
     calc +=0.25;
 }
 	else if(bicho.CD==13){
-calc +=0.5
+calc +=0.5;
 }
     if(bicho.CD <=18){
     
-       for(int x = 13, x < bicho.CD, x++){
-       calc+=1
+       for(int x = 13; x < bicho.CD; x++){
+       calc+=1;
        
 		}
     }
     
-    if(bicho.CD <=18){
+    else if(bicho.CD <=30){
     
-       for(int x = 13, x < bicho.CD, x+=2){
-       calc+=1
-       
-		}
+       for(int x = 20; x < bicho.CD && x < 30; x+=2){
+       calc+=1;
+		} }
+    else if(bicho.CD <=35){
+    
+       for(int x = 31; x < bicho.CD && x < 35; x+=2){
+       calc+=1;
+		} 
     }
-    */
+
+        else if(bicho.CD <=44){
+    
+       for(int x = 38; x < bicho.CD && x < 44; x+=2){
+       calc+=1;
+		} 
+    }
+    else if (bicho.CD <= 47)
+        {
+            calc = +18;
+            arredondar = +19;
+            cont++;
+        }
+     else if (bicho.CD <= 49)
+        {
+            calc = +20;
+        }
+     else if (bicho.CD <= 51)
+        {
+            calc = +21;
+        }
+    else if (bicho.CD <= 51)
+        {
+            calc = +22;
+        }
+    
+    
+    return calc;
 }
 
 #endif
