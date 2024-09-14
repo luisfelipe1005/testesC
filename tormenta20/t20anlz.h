@@ -21,108 +21,20 @@ float anlz(Monstro m);
 float anlz(Monstro bicho)
 {
     float calc = 0;
-    int arredondar = 0;
     int cont = 0;
     if (bicho.tipo == 1)
     {
         // calcula o valor de nd do valor de ataque
         printf("%d\n", bicho.Vatq);
-        if (bicho.Vatq <= 6)
-        {
-            calc = +0.25;
-        }
-        else if (bicho.Vatq <= 7)
-        {
-            calc = +0.5;
-        }
-        else if (bicho.Vatq <= 9)
-        {
-            calc = +1;
-        }
-        else if (bicho.Vatq <= 12)
-        {
-            calc = +2;
-        }
-        else if (bicho.Vatq <= 14)
-        {
-            calc = +3;
-        }
-        else if (bicho.Vatq <= 16)
-        {
-            calc = +4;
-        }
-        else if (bicho.Vatq == 17)
-        {
-            calc = +5;
-        }
-        else if (bicho.Vatq <= 20)
-        {
-            calc = +6;
-        }
-        else if (bicho.Vatq <= 24)
-        {
-            calc = +7;
-        }
-        else if (bicho.Vatq <= 26)
-        {
-            calc = +8;
-        }
-        else if (bicho.Vatq == 27)
-        {
-            calc = +9;
-        }
-        else if (bicho.Vatq <= 29)
-        {
-            calc = +10;
-        }
-        else if (bicho.Vatq <= 34)
-        {
-            calc = +11;
-        }
-        else if (bicho.Vatq <= 36)
-        {
-            calc = +12;
-        }
-        else if (bicho.Vatq == 37)
-        {
-            calc = +13;
-        }
-        else if (bicho.Vatq <= 39)
-        {
-            calc = +14;
-        }
-        else if (bicho.Vatq <= 43)
-        {
-            calc = +15;
-        }
-        else if (bicho.Vatq <= 46)
-        {
-            calc = +16;
-        }
-        else if (bicho.Vatq == 47)
-        {
-            calc = +17;
-        }
-        else if (bicho.Vatq <= 49)
-        {
-            calc = +18;
-        }
-        else if (bicho.Vatq <= 52)
-        {
-            calc = +19;
-        }
-        else if (bicho.Vatq <= 54)
-        {
-            calc = +20;
-        }
-        else if (bicho.Vatq <= 58)
-        {
-            calc = +21;
-        }
-        else
-        {
-            calc = +22;
-        }
+       cont =   0.4007 * bicho.Vatq-2.2326;
+if(cont>0.25){cont=0.25;}
+else if(cont<22){cont=22;}
+calc += cont;
+cont=0;
+
+
+
+
 
         // calcula o valor da nd baseado em dano medio
         printf("%f\n", bicho.dano);
@@ -223,6 +135,7 @@ float anlz(Monstro bicho)
         {
             calc = +22;
         }
+        
         // calcula o valor de nd baseado na defesa
         printf("%d\n", bicho.defesa);
         if (bicho.defesa <= 11)

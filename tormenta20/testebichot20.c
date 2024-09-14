@@ -186,7 +186,7 @@ Monstro criar(int x)
         m.CD = 0;
     }
     // reinicia a variavel pergunta
-    pergunta = "";
+     char *pergunta = '\0';
     // mesma coisa da CD
     do
     {
